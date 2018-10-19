@@ -29,21 +29,27 @@ Read through the instructions to get a sense of the scope of this code challenge
 ![Showcasing the basic heroines and powers routes](heroines_and_powers.gif)
 
 1. Create the associations between models. You may have to alter the current schema to get your code working. If you've set up your relationships properly, you should be able to run `rake db:seed` without errors, and confirm in console that the heroines and powers have been created with the proper relations.
+#check
 
 2. On the heroines index page, a heroine's name should link to the heroine's show page.
+#check
 
 3. The heroine show page should include the heroine's name (eg. Kamala Khan), her super name (eg. Ms. Marvel), and her power. The power should link to the power show page.  
+#check
 
 4. The power show page should have its name and description.
+#check
 
 5. As a visitor to the website, I should be able to create a new heroine with her name and super name.
+#check
 
 6. The form should also allow each heroine to be created with **only one of the existing powers**.
+#check - collection_select
 
   ![A form for adding a new heroine](new_heroine_form.gif)
 
 7. Make sure no two heroines have the same super name.
-
+-check
 # BONUS TO BE COMPLETED IF EVERYTHING ELSE IS DONE
 
 8. Add a filter to the index view of the heroines. This will allow the visitor to search for an existing power and display all the heroines with that power on the same view page.
@@ -52,10 +58,10 @@ Read through the instructions to get a sense of the scope of this code challenge
 
 
 ### Hints / Tips
-+ Draw your domain model and associations before you begin. You may have to alter the current schema to get your code working.
-+ A child model cannot be persisted without being associated with its parent model.
-+ More than one heroine can have the same power.
-+ More than one heroine can have the same power.
++ Draw your domain model and associations before you begin. You may have to alter the current schema to get your code working. - check
++ A child model cannot be persisted without being associated with its parent model. - check
++ More than one heroine can have the same power. - check
++ More than one heroine can have the same power. check
 + More than one heroine can have the same power.
 + We want to be RESTful. What URL should show info about a particular heroine? What URL should show a form to create a heroine? What controller actions are associated?
 + If you're having a hard time implementing the filter, take a look at this http://guides.rubyonrails.org/form_helpers.html#a-generic-search-form. We are asking an input field to search for powers.
