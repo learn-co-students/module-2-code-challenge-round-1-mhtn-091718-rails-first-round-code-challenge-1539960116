@@ -1,10 +1,28 @@
 <h2>All Heroines</h2>
 
+<!-- <%= form_tag(heroines_path method: :get) do %>
+  Power <%= text_field_tag :power_id %>
+  <%= submit_tag 'Search' %>
+<% end %>
+ -->
+ <!-- Incomplete bonus -->
+
 <ul>
   <% @heroines.each do |heroine| %>
     <li>
-      <%= heroine.super_name %>
+      <%= link_to heroine.super_name, heroine_path(heroine) %>
     </li>
     <br>
   <% end %>
 </ul>
+
+
+<br>
+<%= link_to "Create heroine", new_heroine_path %><br><br>
+<%= link_to "See all powers", powers_path %>
+
+
+<!-- Deliverable 2: On the heroines index page, a heroine's name should link to the heroine's show page.  -->
+
+<!-- Deliverable 5: As a visitor to the website, I should be able to create a new heroine with her name and super name.As a visitor to the website, I should be able to create a new heroine with her name and super name.  -->
+<!-- Accomplished via the new view -->

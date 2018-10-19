@@ -1,0 +1,10 @@
+<h1><%=@heroine.super_name%></h1>
+
+Name: <%= @heroine.name %><br>
+Power: <%= link_to @heroine.power.name, power_path(@heroine.power) %>
+
+<br><br>
+<%= link_to "Back to all heroines", heroines_path %>
+
+
+<!-- Deliverable 3: The heroine show page should include the heroine's name (eg. Kamala Khan), her super name (eg. Ms. Marvel), and her power. The power should link to the power show page. -->
