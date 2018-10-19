@@ -2,7 +2,9 @@ class HeroinesController < ApplicationController
   before_action :find_heroine, only: %w(show)
 
   def index
+    
     @heroines = Heroine.all
+
   end
 
   def show
