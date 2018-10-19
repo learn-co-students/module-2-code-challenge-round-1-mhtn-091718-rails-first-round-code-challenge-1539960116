@@ -1,9 +1,17 @@
 <h2>All Heroines</h2>
 
+<%= form_tag(heroines_path, method: :get) do %>
+  <%= label_tag(:search, "Filter by power:") %>
+  <%= collection_select :search, :power_id, Power.all, :id, :name %>
+  <%= submit_tag(value="Filter") %>
+<% end %>
+
 <ul>
   <% @heroines.each do |heroine| %>
     <li>
-      <%= heroine.super_name %>
+      <%= link_to heroine.name, heroine_path(heroine) %>
+      <%= heroine.super_name  %>
+      <%= heroine.power.name %>
     </li>
     <br>
   <% end %>
