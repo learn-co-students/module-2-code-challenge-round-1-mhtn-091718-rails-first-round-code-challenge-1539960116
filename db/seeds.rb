@@ -34,3 +34,4 @@ heroines = heroines.map { |heroine| heroine.merge( { power_id: Power.all.sample.
 # ---------------
 
 heroines.each { |heroine| Heroine.create(heroine) }
+puts "DONE SEEEDING"

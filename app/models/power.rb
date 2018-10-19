@@ -1,2 +1,3 @@
 class Power < ApplicationRecord
-end
+  has_many :heroines, dependent: :destroy
+end ### End of PowerClass
