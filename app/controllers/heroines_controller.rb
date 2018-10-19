@@ -2,7 +2,13 @@ class HeroinesController < ApplicationController
   before_action :find_heroine, only: [:show]
 
   def index
-    @heroines = Heroine.all
+    if !!params[:q]
+      searched_power_name = params[:q]
+      searched_power = Power.find_by(name: searched_power_name)
+      @heroines = Heroine.where(power_id: searched_power.id)
+    else
+      @heroines = Heroine.all
+    end
   end
 
   def show
@@ -27,7 +33,7 @@ class HeroinesController < ApplicationController
 private
 
   def heroine_params
-    params.require(:heroine).permit(:name, :super_name, :power_id)
+    params.require(:heroine).permit(:name, :super_name, :power_id,:q)
   end
 
   def find_heroine

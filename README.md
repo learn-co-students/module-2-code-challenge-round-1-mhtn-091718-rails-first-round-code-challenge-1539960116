@@ -44,9 +44,9 @@ Read through the instructions to get a sense of the scope of this code challenge
 
 <!-- 7. Make sure no two heroines have the same super name. -->
 
-# BONUS TO BE COMPLETED IF EVERYTHING ELSE IS DONE
+<!-- # BONUS TO BE COMPLETED IF EVERYTHING ELSE IS DONE
 
-8. Add a filter to the index view of the heroines. This will allow the visitor to search for an existing power and display all the heroines with that power on the same view page.
+8. Add a filter to the index view of the heroines. This will allow the visitor to search for an existing power and display all the heroines with that power on the same view page. -->
 
 ![Searching on the heroines route and finding heroines by a power](search_by_power.gif)
 
