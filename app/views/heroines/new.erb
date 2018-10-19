@@ -1,0 +1,16 @@
+<% flash.each do |name,msg| %>
+  <%= content_tag :div, msg, class: name %><br>
+<% end %>
+
+
+<%= form_for @heroine do |f| %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :super_name %><br>
+  <%= f.text_field :super_name %><br>
+
+  <%= f.collection_select :power_id, Power.order(:id), :id, :name, :prompt => 'Please Select' %>
+
+  <%= f.submit 'Create Heroine' %>
+<% end %>
