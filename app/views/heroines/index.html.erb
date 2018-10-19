@@ -1,10 +1,20 @@
 <h2>All Heroines</h2>
 
+<h3>Create a new heroine?</h3>
+<p>
+  <%= button_to 'new', new_heroine_path, method: :get %>
+</p>
+
 <ul>
   <% @heroines.each do |heroine| %>
+
     <li>
-      <%= heroine.super_name %>
+      <%= link_to heroine.super_name, heroine_path(heroine) %>
     </li>
+    <p>
+      <%= button_to 'destroy', heroine_path(heroine), method: :delete %>
+    </p>
+
     <br>
   <% end %>
 </ul>
