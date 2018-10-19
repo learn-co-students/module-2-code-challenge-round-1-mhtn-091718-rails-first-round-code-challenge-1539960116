@@ -22,17 +22,20 @@ Luckily, another developer has already started the job. We have a model for hero
 
 We have several different powers and each can be bestowed upon **more than one heroine**. Each heroine can only have **one power**.
 
+//heroine belongs to power
+// power has_many superheroine
+
 ## Instructions / Deliverables
 
 Read through the instructions to get a sense of the scope of this code challenge, and then tackle them one by one.
 
 ![Showcasing the basic heroines and powers routes](heroines_and_powers.gif)
 
-1. Create the associations between models. You may have to alter the current schema to get your code working. If you've set up your relationships properly, you should be able to run `rake db:seed` without errors, and confirm in console that the heroines and powers have been created with the proper relations.
+DONE 1. Create the associations between models. You may have to alter the current schema to get your code working. If you've set up your relationships properly, you should be able to run `rake db:seed` without errors, and confirm in console that the heroines and powers have been created with the proper relations.
 
-2. On the heroines index page, a heroine's name should link to the heroine's show page.
+DONE 2. On the heroines index page, a heroine's name should link to the heroine's show page.
 
-3. The heroine show page should include the heroine's name (eg. Kamala Khan), her super name (eg. Ms. Marvel), and her power. The power should link to the power show page.  
+DONE 3. The heroine show page should include the heroine's name (eg. Kamala Khan), her super name (eg. Ms. Marvel), and her power. The power should link to the power show page.  
 
 4. The power show page should have its name and description.
 
