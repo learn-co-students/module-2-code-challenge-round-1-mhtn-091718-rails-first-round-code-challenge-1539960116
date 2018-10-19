@@ -1,0 +1,10 @@
+
+
+
+The heroine show page should include the heroine's name (eg. Kamala Khan), her super name (eg. Ms. Marvel), and her power. The power should link to the power show page.
+
+The power show page should have its name and description.
+
+As a visitor to the website, I should be able to create a new heroine with her name and super name.
+
+The form should also allow each heroine to be created with only one of the existing powers.
