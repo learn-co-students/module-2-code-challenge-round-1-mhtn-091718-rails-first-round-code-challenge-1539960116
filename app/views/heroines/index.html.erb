@@ -1,5 +1,6 @@
 <h2>All Heroines</h2>
-<%= link_to "Go to All", heroines_path %>
+<%= link_to "Go to All", heroines_path %><br>
+<%= link_to "Add New Heroine", new_heroine_path %><br>
 
 <%= form_tag(heroines_path, method: :get) do %>
   <%= label_tag(:search, "Filter by power:") %>
