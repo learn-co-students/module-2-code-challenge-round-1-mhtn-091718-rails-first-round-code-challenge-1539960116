@@ -3,7 +3,6 @@ class HeroinesController < ApplicationController
   def index
     if params["search"]
       @heroines = Heroine.where(:power_id => params["search"]["power_id"])
-      byebug
     else
       @heroines = Heroine.all
     end
