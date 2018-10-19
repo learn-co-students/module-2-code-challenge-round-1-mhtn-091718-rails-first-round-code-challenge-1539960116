@@ -1,0 +1,23 @@
+<h1> Create a Heroine </h1>
+
+<% if flash[:error] %>
+<% flash[:error].each do |error| %>
+<b>* <%= error %></b><br>
+<% end %>
+<% end %>
+
+<%= form_for @heroine do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+
+  <%= f.label :super_name %>:
+  <%= f.text_field :super_name %><br />
+
+  <%= f.label :power_id %>:
+  <%= f.collection_select :power_id, Power.all, :id, :name, include_blank: true %><br />
+
+  <%= f.submit %>
+<% end %>
+
+<h3><%= link_to "Go to Heroines", heroines_path %><h3><p>
+<h3><%= link_to "Go to Powers", powers_path %><h3><p>
