@@ -2,7 +2,12 @@ class HeroinesController < ApplicationController
   before_action :find_heroine, only: [:show]
 
   def index
-    @heroines = Heroine.all
+    if params[:commit] == "Search"
+      search_term = params[:q].strip
+      @heroines = Heroine.joins(:power).where(powers: {:name => search_term})
+    else
+      @heroines = Heroine.all
+    end
   end
 
   def show

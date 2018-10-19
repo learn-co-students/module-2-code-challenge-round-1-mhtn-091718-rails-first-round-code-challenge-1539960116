@@ -1,6 +1,14 @@
 <h2>All Heroines</h2>
 
-<%= link_to "Create a new heroine", new_heroine_path %>
+<%= link_to "Create a new heroine", new_heroine_path %><br><br>
+
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:q, "Search By Superpower:") %><br>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<p><small><%= link_to "Undo Search", heroines_path %></small></p>
 
 <h4>Featured Heroines:</h4>
 <ul>
