@@ -3,9 +3,10 @@
 <ul>
   <% @powers.each do |power| %>
     <li>
-      <%= power.name %>
+      <%= link_to power.name, power %>
       <br>
-      Description: <%= power.description %>
+      Description: <%= power.description %><br>
+      <%= link_to "destroy", power, method: :delete %>
     </li>
     <br>
   <% end %>

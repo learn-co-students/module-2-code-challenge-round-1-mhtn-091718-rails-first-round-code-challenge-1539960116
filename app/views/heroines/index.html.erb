@@ -3,7 +3,9 @@
 <ul>
   <% @heroines.each do |heroine| %>
     <li>
-      <%= heroine.super_name %>
+      <%= link_to heroine.super_name, heroine %><br>
+      <%= link_to "edit", edit_heroine_path(heroine) %>
+      <%= link_to "destroy", heroine, method: :delete %>
     </li>
     <br>
   <% end %>
